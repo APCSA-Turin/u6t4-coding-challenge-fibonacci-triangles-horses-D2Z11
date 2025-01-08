@@ -28,20 +28,37 @@ public class TriangleCollection {
   
     // PRECONDITION: numTriangles >= 2
     public TriangleCollection(int numTriangles, int startX, int startY) {
-      /* IMPLEMENT ME */
+      collection = new Triangle[numTriangles];
+      for (int i = 0; i < numTriangles; i++) {
+        Point p1 = new Point(-startX, 0);
+        Point p2 = new Point(0, startY);
+        Point p3 = new Point(startX - i, 0);
+        Triangle t = new Triangle(p1, p2, p3);
+        collection[i] = t;
+      }
     }
   
     // Calculate and return the sum of the perimeters of
     // all Triangles in the collection
     public double totalPerimeter() {
-      /* IMPLEMENT ME */
+      double sum = 0;
+      for (int i = 0; i < collection.length; i++) {
+        sum += collection[i].perimeter();
+      }
+      return sum;
     }
   
     // adds increment to both the x and y coordinates of each of the
     // three Points in every Triangle in the collections array
     // ADD GETTER AND SETTER METHODS TO OTHER CLASSES AS NECESSARY
     public void shiftTriangles(int increment) {
-      /* IMPLEMENT ME */
+      for (int i = 0; i < collection.length; i++) {
+        Point[] p = collection[i].getVertices();
+        for (int z = 0; z < p.length; z++) {
+          p[z].updateX(p[z].getX() + increment);
+          p[z].updateY(p[z].getY() + increment);
+        }
+      }
     }
   
     // returns a String that contains each Triangle in the 
@@ -53,7 +70,11 @@ public class TriangleCollection {
     //  [(1, 5), (5, 12), (8, 5)]
     //  [(1, 5), (5, 12), (7, 5)]"
     public String triangleCollectionInfo() {
-      /* IMPLEMENT ME */
+      String str = "";
+      for (int i = 0; i < collection.length; i++) {
+        str += collection[i].triangleInfo() + "\n";
+      }
+      return str;
     }
   }
   

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestHorseBarn" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-01-03T17:33:59" hostname="codespaces-cc9e55" time="0.076">
+<testsuite name="com.example.project.TestHorseBarn" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-01-08T14:27:41" hostname="codespaces-be1950" time="0.047">
   <properties/>
-  <testcase name="testHorseBarnConstructorAndGetStalls()" classname="com.example.project.TestHorseBarn" time="0.073"/>
-  <testcase name="testPlaceHorseAndFindHorseStall()" classname="com.example.project.TestHorseBarn" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testHorseBarnConstructorAndGetStalls()" classname="com.example.project.TestHorseBarn" time="0.027"/>
+  <testcase name="testPlaceHorseAndFindHorseStall()" classname="com.example.project.TestHorseBarn" time="0.007"/>
+  <testcase name="testConsolidate()" classname="com.example.project.TestHorseBarn" time="0.001"/>
+  <system-out><![CDATA[Trigger
+Trigger
+Silver
+Trigger
+Silver
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
